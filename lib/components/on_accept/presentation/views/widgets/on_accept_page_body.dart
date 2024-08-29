@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:whats_app/components/on_accept/presentation/views/widgets/custom_on_accept_button.dart';
+import 'package:whats_app/components/on_accept/presentation/views/widgets/rich_text_section.dart';
 import 'package:whats_app/constants.dart';
 import 'package:whats_app/core/utils/app_images.dart';
 import 'package:whats_app/core/utils/app_styles.dart';
@@ -38,22 +40,7 @@ class OnAcceptPageBody extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              SizedBox(
-                height: 40.h,
-                width: 290.w,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: editedGreen,
-                    foregroundColor: const Color(0xff111B21),
-                    shape: const RoundedRectangleBorder(),
-                  ),
-                  child: const Text(
-                    'AGREE AND CONTINUE',
-                    style: AppStyles.style18Med,
-                  ),
-                ),
-              ),
+              const CustomOnAcceptButton(),
               SizedBox(
                 height: 70.h,
               ),
@@ -92,43 +79,6 @@ class OnAcceptPageBody extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class RichTextSection extends StatelessWidget {
-  const RichTextSection({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        text: "Read our",
-        style: AppStyles.style14Med.copyWith(
-          color: const Color(0xff8696A0),
-        ),
-        children: [
-          TextSpan(
-            text: " Privacy Policy. ",
-            style: AppStyles.style14Med.copyWith(
-              color: const Color(0xff53BDEB),
-            ),
-          ),
-          const TextSpan(
-            text: "Tap 'Agree and Continue' to accept the",
-            style: AppStyles.style14Med,
-          ),
-          TextSpan(
-            text: " Terms of Services. ",
-            style: AppStyles.style14Med.copyWith(
-              color: const Color(0xff53BDEB),
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

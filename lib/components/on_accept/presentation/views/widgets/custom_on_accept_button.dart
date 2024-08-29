@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:whats_app/constants.dart';
 import 'package:whats_app/core/utils/app_styles.dart';
 
 class CustomOnAcceptButton extends StatelessWidget {

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:whats_app/core/themes/dark_theme.dart';
+import 'package:whats_app/core/themes/light_theme.dart';
 import 'package:whats_app/core/utils/app_router.dart';
 
 void main() async {
@@ -18,6 +20,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         routerConfig: AppRouter.appRouter,
+        theme: lightTheme(),
+        darkTheme: darkTheme(),
+        themeMode: ThemeMode.light,
       ),
     );
   }

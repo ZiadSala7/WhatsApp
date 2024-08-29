@@ -16,8 +16,6 @@ class CustomOnAcceptButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
-          backgroundColor: editedGreen,
-          foregroundColor: const Color(0xff111B21),
           shape: const RoundedRectangleBorder(),
         ),
         child: const Text(

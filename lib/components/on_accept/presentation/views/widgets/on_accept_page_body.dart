@@ -28,11 +28,9 @@ class OnAcceptPageBody extends StatelessWidget {
         Expanded(
           child: Column(
             children: [
-              Text(
+              const Text(
                 'Welcome To WhatsApp',
-                style: AppStyles.style25Bol.copyWith(
-                  color: Colors.white,
-                ),
+                style: AppStyles.style25Bol,
               ),
               const SizedBox(
                 height: 10,

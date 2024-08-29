@@ -10,33 +10,40 @@ class CustomLanguageChangeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 140),
+      padding: const EdgeInsets.symmetric(horizontal: 130),
       child: InkWell(
         onTap: () {},
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(
-              Icons.language,
-              color: editedGreen,
-            ),
-            const SizedBox(
-              width: 5,
-            ),
-            Text(
-              'English',
-              style: AppStyles.style16Med.copyWith(
-                color: Colors.white,
+        child: Container(
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.language,
+                color: editedGreen,
               ),
-            ),
-            const SizedBox(
-              width: 5,
-            ),
-            const Icon(
-              Icons.keyboard_arrow_down,
-              color: editedGreen,
-            )
-          ],
+              const SizedBox(
+                width: 5,
+              ),
+              Text(
+                'English',
+                style: AppStyles.style16Med.copyWith(
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              const Icon(
+                Icons.keyboard_arrow_down,
+                color: editedGreen,
+              )
+            ],
+          ),
         ),
       ),
     );

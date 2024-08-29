@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:whats_app/components/on_accept/presentation/views/widgets/custom_language_change_button.dart';
 import 'package:whats_app/components/on_accept/presentation/views/widgets/custom_on_accept_button.dart';
 import 'package:whats_app/components/on_accept/presentation/views/widgets/rich_text_section.dart';
 import 'package:whats_app/constants.dart';
@@ -44,37 +45,7 @@ class OnAcceptPageBody extends StatelessWidget {
               SizedBox(
                 height: 70.h,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 140),
-                child: InkWell(
-                  onTap: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        Icons.language,
-                        color: editedGreen,
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'English',
-                        style: AppStyles.style16Med.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      const Icon(
-                        Icons.keyboard_arrow_down,
-                        color: editedGreen,
-                      )
-                    ],
-                  ),
-                ),
-              )
+              const CustomLanguageChangeButton()
             ],
           ),
         ),

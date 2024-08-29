@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:whats_app/core/utils/app_router.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
+  final prefs = await SharedPreferences.getInstance();
+  prefs.getBool('modeChange');
 }
 
 class MyApp extends StatelessWidget {
@@ -10,9 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      routerConfig: AppRouter.appRouter,
+    return ScreenUtilInit(
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        routerConfig: AppRouter.appRouter,
+      ),
     );
   }
 }

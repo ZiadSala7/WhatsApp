@@ -5,10 +5,14 @@ import 'package:whats_app/core/themes/dark_theme.dart';
 import 'package:whats_app/core/themes/light_theme.dart';
 import 'package:whats_app/core/utils/app_router.dart';
 
-void main() async {
+bool darkMode = false;
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.getInstance().then((instance) {
+    darkMode = instance.getBool('darkMode')!;
+  });
+
   runApp(const MyApp());
-  final prefs = await SharedPreferences.getInstance();
-  prefs.getBool('modeChange');
 }
 
 class MyApp extends StatelessWidget {
@@ -22,7 +26,7 @@ class MyApp extends StatelessWidget {
         routerConfig: AppRouter.appRouter,
         theme: lightTheme(),
         darkTheme: darkTheme(),
-        themeMode: ThemeMode.light,
+        themeMode: darkMode ? ThemeMode.dark : ThemeMode.light,
       ),
     );
   }

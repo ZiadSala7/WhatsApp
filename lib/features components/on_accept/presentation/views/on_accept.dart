@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whats_app/components/on_accept/presentation/views/widgets/on_accept_page_body.dart';
+import 'package:whats_app/features%20components/on_accept/presentation/views/widgets/on_accept_page_body.dart';
 
 class OnAcceptPage extends StatelessWidget {
   const OnAcceptPage({super.key});

@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:whats_app/core/utils/app_images.dart';
+import 'package:whats_app/core/utils/app_navigations.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -20,7 +20,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     timer = Timer(
       const Duration(seconds: 5),
       () {
-        // Navigator.of(context).pushReplacement(newRoute);
+        Navigator.of(context).pushReplacementNamed(AppNavigations.onAcceptView);
       },
     );
   }

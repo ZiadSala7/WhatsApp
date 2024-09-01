@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:whats_app/core/utils/app_router.dart';
 import 'package:whats_app/core/utils/app_styles.dart';
 
 class CustomOnAcceptButton extends StatelessWidget {
@@ -14,7 +16,7 @@ class CustomOnAcceptButton extends StatelessWidget {
       width: 290.w,
       child: ElevatedButton(
         onPressed: () {
-          // Provider.of<ThemeChanger>(context, listen: false).setTheme();
+          GoRouter.of(context).pushReplacement(AppRouter.loginView);
         },
         style: ElevatedButton.styleFrom(
           shape: const RoundedRectangleBorder(),

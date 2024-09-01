@@ -2,8 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:whats_app/core/utils/app_images.dart';
-import 'package:whats_app/core/utils/app_navigations.dart';
+import 'package:whats_app/core/utils/app_router.dart';
+import 'package:whats_app/features%20components/on_accept/presentation/view%20models/provider/theme_changer.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -20,7 +23,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     timer = Timer(
       const Duration(seconds: 5),
       () {
-        Navigator.of(context).pushReplacementNamed(AppNavigations.onAcceptView);
+        GoRouter.of(context).pushReplacement(AppRouter.onAccept);
       },
     );
   }
@@ -29,7 +32,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   Widget build(BuildContext context) {
     return Center(
       child: Image.asset(
-        AppImages.splashLight,
+        Provider.of<ThemeChanger>(context).getTheme()
+            ? AppImages.splashLight
+            : AppImages.splashDark,
         width: 300.sp,
       ),
     );

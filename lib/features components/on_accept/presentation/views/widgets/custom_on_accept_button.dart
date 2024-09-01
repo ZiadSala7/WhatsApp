@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:provider/provider.dart';
 import 'package:whats_app/core/utils/app_styles.dart';
-import 'package:whats_app/features%20components/on_accept/presentation/view%20models/provider/theme_changer.dart';
 
 class CustomOnAcceptButton extends StatelessWidget {
   const CustomOnAcceptButton({
@@ -16,7 +14,7 @@ class CustomOnAcceptButton extends StatelessWidget {
       width: 290.w,
       child: ElevatedButton(
         onPressed: () {
-          Provider.of<ThemeChanger>(context, listen: false).setTheme();
+          // Provider.of<ThemeChanger>(context, listen: false).setTheme();
         },
         style: ElevatedButton.styleFrom(
           shape: const RoundedRectangleBorder(),

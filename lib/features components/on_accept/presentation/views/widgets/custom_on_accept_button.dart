@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import 'package:whats_app/core/utils/app_styles.dart';
-import 'package:whats_app/main.dart';
+import 'package:whats_app/features%20components/on_accept/presentation/view%20models/provider/theme_changer.dart';
 
 class CustomOnAcceptButton extends StatefulWidget {
   const CustomOnAcceptButton({
@@ -21,8 +22,7 @@ class _CustomOnAcceptButtonState extends State<CustomOnAcceptButton> {
       child: ElevatedButton(
         onPressed: () {
           setState(() {
-            darkMode = !darkMode;
-            // ignore: use_build_context_synchronously
+            Provider.of<ThemeChanger>(context, listen: false).setTheme();
           });
         },
         style: ElevatedButton.styleFrom(

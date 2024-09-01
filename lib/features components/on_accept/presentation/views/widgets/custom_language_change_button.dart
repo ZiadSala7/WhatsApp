@@ -16,7 +16,6 @@ class CustomLanguageChangeButton extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: Colors.black,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
@@ -32,7 +31,7 @@ class CustomLanguageChangeButton extends StatelessWidget {
               Text(
                 'English',
                 style: AppStyles.style16Med.copyWith(
-                  color: Colors.white,
+                  color: editedGreen,
                 ),
               ),
               const SizedBox(

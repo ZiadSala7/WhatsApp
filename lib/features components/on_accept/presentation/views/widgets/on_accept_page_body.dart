@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:whats_app/constants.dart';
 import 'package:whats_app/features%20components/on_accept/presentation/views/widgets/custom_language_change_button.dart';
 import 'package:whats_app/features%20components/on_accept/presentation/views/widgets/custom_on_accept_button.dart';
 import 'package:whats_app/features%20components/on_accept/presentation/views/widgets/rich_text_section.dart';
-import 'package:whats_app/constants.dart';
 import 'package:whats_app/core/utils/app_images.dart';
 import 'package:whats_app/core/utils/app_styles.dart';
 

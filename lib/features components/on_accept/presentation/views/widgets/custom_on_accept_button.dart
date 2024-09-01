@@ -4,16 +4,11 @@ import 'package:provider/provider.dart';
 import 'package:whats_app/core/utils/app_styles.dart';
 import 'package:whats_app/features%20components/on_accept/presentation/view%20models/provider/theme_changer.dart';
 
-class CustomOnAcceptButton extends StatefulWidget {
+class CustomOnAcceptButton extends StatelessWidget {
   const CustomOnAcceptButton({
     super.key,
   });
 
-  @override
-  State<CustomOnAcceptButton> createState() => _CustomOnAcceptButtonState();
-}
-
-class _CustomOnAcceptButtonState extends State<CustomOnAcceptButton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -21,9 +16,7 @@ class _CustomOnAcceptButtonState extends State<CustomOnAcceptButton> {
       width: 290.w,
       child: ElevatedButton(
         onPressed: () {
-          setState(() {
-            Provider.of<ThemeChanger>(context, listen: false).setTheme();
-          });
+          Provider.of<ThemeChanger>(context, listen: false).setTheme();
         },
         style: ElevatedButton.styleFrom(
           shape: const RoundedRectangleBorder(),

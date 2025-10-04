@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:whats_app/constants.dart';
-import 'package:whats_app/features/on_accept/presentation/views/widgets/custom_language_change_button.dart';
-import 'package:whats_app/features/on_accept/presentation/views/widgets/custom_on_accept_button.dart';
-import 'package:whats_app/features/on_accept/presentation/views/widgets/rich_text_section.dart';
-import 'package:whats_app/core/utils/app_images.dart';
-import 'package:whats_app/core/utils/app_styles.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../generated/l10n.dart';
+import 'custom_language_change_button.dart';
+import 'custom_on_accept_button.dart';
+import 'rich_text_section.dart';
+import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/utils/app_styles.dart';
 
-class OnAcceptPageBody extends StatelessWidget {
-  const OnAcceptPageBody({super.key});
+class OnboardingViewBody extends StatelessWidget {
+  const OnboardingViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,15 +23,15 @@ class OnAcceptPageBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Image.asset(
               AppImages.circle,
-              color: editedGreen,
+              color: AppColors.editedGreen,
             ),
           ),
         ),
         Expanded(
           child: Column(
             children: [
-              const Text(
-                'Welcome To WhatsApp',
+              Text(
+                s.onAccWelcome,
                 style: AppStyles.style25Bol,
               ),
               const SizedBox(

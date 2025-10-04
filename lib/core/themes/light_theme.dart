@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:whats_app/constants.dart';
+import '../utils/app_colors.dart';
 
 ThemeData lightTheme() {
   final lightTheme = ThemeData.light();
   return lightTheme.copyWith(
-    scaffoldBackgroundColor: lightBackground,
+    scaffoldBackgroundColor: AppColors.lightBackground,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: editedGreen,
+        backgroundColor: AppColors.editedGreen,
         foregroundColor: const Color(0xffffffff),
       ),
     ),

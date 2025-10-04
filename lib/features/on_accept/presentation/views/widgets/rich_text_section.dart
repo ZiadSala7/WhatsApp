@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:whats_app/core/utils/app_styles.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class RichTextSection extends StatelessWidget {
   const RichTextSection({
     super.key,
@@ -8,27 +10,28 @@ class RichTextSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-        text: "Read our",
-        style: AppStyles.style14Med.copyWith(
+        text: s.read,
+        style: AppStyles.style14Bol.copyWith(
           color: const Color(0xff8696A0),
         ),
         children: [
           TextSpan(
-            text: " Privacy Policy. ",
-            style: AppStyles.style14Med.copyWith(
+            text: s.privacy,
+            style: AppStyles.style14Bol.copyWith(
               color: const Color(0xff53BDEB),
             ),
           ),
-          const TextSpan(
-            text: "Tap 'Agree and Continue' to accept the",
-            style: AppStyles.style14Med,
+          TextSpan(
+            text: s.tap,
+            style: AppStyles.style14Bol,
           ),
           TextSpan(
-            text: " Terms of Services. ",
-            style: AppStyles.style14Med.copyWith(
+            text: s.terms,
+            style: AppStyles.style14Bol.copyWith(
               color: const Color(0xff53BDEB),
             ),
           ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whats_app/constants.dart';
-import 'package:whats_app/core/utils/app_styles.dart';
+import 'package:provider/provider.dart';
+import '../../managers/provider/locale_changer.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_styles.dart';
 
 class CustomLanguageChangeButton extends StatelessWidget {
   const CustomLanguageChangeButton({
@@ -9,10 +11,13 @@ class CustomLanguageChangeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<LocaleChanger>(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 130),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          provider.changeLocale();
+        },
         child: Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
@@ -23,7 +28,7 @@ class CustomLanguageChangeButton extends StatelessWidget {
             children: [
               const Icon(
                 Icons.language,
-                color: editedGreen,
+                color: AppColors.editedGreen,
               ),
               const SizedBox(
                 width: 5,
@@ -31,7 +36,7 @@ class CustomLanguageChangeButton extends StatelessWidget {
               Text(
                 'English',
                 style: AppStyles.style16Med.copyWith(
-                  color: editedGreen,
+                  color: AppColors.editedGreen,
                 ),
               ),
               const SizedBox(
@@ -39,7 +44,7 @@ class CustomLanguageChangeButton extends StatelessWidget {
               ),
               const Icon(
                 Icons.keyboard_arrow_down,
-                color: editedGreen,
+                color: AppColors.editedGreen,
               )
             ],
           ),

@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:whats_app/core/utils/app_router.dart';
 import 'package:whats_app/core/utils/app_styles.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class CustomOnAcceptButton extends StatelessWidget {
   const CustomOnAcceptButton({
     super.key,
@@ -11,6 +13,7 @@ class CustomOnAcceptButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     return SizedBox(
       height: 40.h,
       width: 290.w,
@@ -21,8 +24,8 @@ class CustomOnAcceptButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           shape: const RoundedRectangleBorder(),
         ),
-        child: const Text(
-          'AGREE AND CONTINUE',
+        child: Text(
+          s.agreeAndCont,
           style: AppStyles.style18Med,
         ),
       ),

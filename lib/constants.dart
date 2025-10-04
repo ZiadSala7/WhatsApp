@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'generated/l10n.dart';
 
-const Color editedGreen = Color(0xff00A884);
-const Color lightBackground = Color(0xffffffff);
-const Color darkBackground = Color(0xff111B21);
+List<LocalizationsDelegate<dynamic>> get localizationDelegatesList {
+  return const [
+    S.delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+  ];
+}

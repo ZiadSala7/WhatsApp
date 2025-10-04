@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:whats_app/core/utils/app_images.dart';
 import 'package:whats_app/core/utils/app_router.dart';
-import 'package:whats_app/features%20components/on_accept/presentation/view%20models/provider/theme_changer.dart';
+import 'package:whats_app/features/on_accept/presentation/view%20models/provider/theme_changer.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

@@ -1,12 +1,12 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+
+import '../../../../../core/providers/theme_changer.dart';
 import '../../../../../core/utils/app_images.dart';
 import '../../../../../core/utils/app_router.dart';
-import '../../../../on_accept/presentation/managers/provider/theme_changer.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

@@ -10,3 +10,8 @@ List<LocalizationsDelegate<dynamic>> get localizationDelegatesList {
     GlobalCupertinoLocalizations.delegate,
   ];
 }
+
+final Map<String, String> languageNames = {
+  'en': 'English',
+  'ar': 'العربية',
+};

@@ -3,21 +3,36 @@ import 'package:provider/provider.dart';
 import '../../../../../core/providers/locale_changer.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
+import '../../../../../generated/l10n.dart';
 
-class CustomLanguageChangeButton extends StatelessWidget {
+class CustomLanguageChangeButton extends StatefulWidget {
   const CustomLanguageChangeButton({
     super.key,
   });
 
   @override
+  State<CustomLanguageChangeButton> createState() =>
+      _CustomLanguageChangeButtonState();
+}
+
+class _CustomLanguageChangeButtonState
+    extends State<CustomLanguageChangeButton> {
+  @override
   Widget build(BuildContext context) {
     var provider = Provider.of<LocaleChanger>(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 130),
-      child: InkWell(
-        onTap: () {
-          provider.changeLocale();
+      child: PopupMenuButton(
+        onSelected: (value) {
+          if ((value == 'English' && provider.locale == const Locale('ar')) ||
+              (value == 'العربية' && provider.locale == const Locale('en'))) {
+            provider.changeLocale();
+          }
         },
+        itemBuilder: (BuildContext context) => [
+          const PopupMenuItem(value: 'English', child: Text('English')),
+          const PopupMenuItem(value: 'العربية', child: Text('العربية')),
+        ],
         child: Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
@@ -34,7 +49,7 @@ class CustomLanguageChangeButton extends StatelessWidget {
                 width: 5,
               ),
               Text(
-                'English',
+                S.of(context).language,
                 style: AppStyles.style16Med.copyWith(
                   color: AppColors.editedGreen,
                 ),

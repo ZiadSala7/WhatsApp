@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "agreeAndCont": MessageLookupByLibrary.simpleMessage("القبول والمتابعة"),
+    "language": MessageLookupByLibrary.simpleMessage("العربية"),
     "onAccWelcome": MessageLookupByLibrary.simpleMessage("مرحباً بك في واتساب"),
     "privacy": MessageLookupByLibrary.simpleMessage(
       "سياسة الخصوصية الخاصة بنا.",
